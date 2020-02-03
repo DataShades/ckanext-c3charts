@@ -1,0 +1,35 @@
+c3charts_js:
+  output: ckanext-spc/%(version)s_c3charts.js
+  extra:
+    preload:
+      - base/main
+  contents:
+      - vendor/d3.js
+      - vendor/c3.js
+      - vendor/backend.ckan.js
+      - charts.js
+      - charts_view.js
+
+
+c3charts_css:
+  output: ckanext-spc/%(version)s_c3charts.css
+  filter: cssrewrite
+  contents:
+      - vendor/c3.css
+      - charts.css
+
+
+c3charts_form_css:
+  output: ckanext-spc/%(version)s_c3charts_form.css
+  filter: cssrewrite
+  contents:
+      - c3controls.css
+
+
+c3charts_form_js:
+  output: ckanext-spc/%(version)s_c3charts_form.js
+  extra:
+    preload:
+      - base/main
+  contents:
+    - charts_form.js
